@@ -5,7 +5,7 @@ const gallery = document.querySelector('.gallery');
 const genGalleryItem = galleryItems.map((item) => {
   return (
 `<div class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="${item.original}">
     <img
       class="gallery__image"
       src="${item.preview}"
@@ -34,6 +34,5 @@ function onOpenModal (event) {
       instance.close()
       window.removeEventListener('keydown', onCloseModal);
     }
-    
 }
 console.log(galleryItems);
